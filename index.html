@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link rel="icon" href="imgs/logo.png" sizes="16x16" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link
+      href="
+                https://cdn.jsdelivr.net/npm/sweetalert2@11.10.1/dist/sweetalert2.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="container py-5">
+      <h1>Bookmarker</h1>
+
+      <div id="form">
+        <h3>
+          <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h3>
+
+        <label for="nameInput"
+          ><i class="fa-solid fa-book-bookmark"></i> Site Name</label
+        >
+        <div
+          class="d-flex justify-content-between align-items-center mb-4 position-relative"
+        >
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Bookmark Name"
+            id="nameInput"
+          />
+          <div class="error-message d-none">
+            <i class="fa-solid fa-caret-up" style="color: #df0016"></i>
+            <p class="m-0 py-1" id="errorName">
+              Enter a Name with (3-7) characters
+            </p>
+          </div>
+        </div>
+
+        <label for="URLInput"><i class="fa-solid fa-link"></i> Site URL</label>
+        <div
+          class="d-flex justify-content-between align-items-center mb-4 position-relative"
+        >
+          <input
+            class="form-control"
+            type="url"
+            placeholder="Website URL"
+            id="URLInput"
+          />
+          <div class="error-message d-none">
+            <i class="fa-solid fa-caret-up" style="color: #df0016"></i>
+            <p class="m-0 py-1" id="errorURL">Enter a valid URL</p>
+          </div>
+        </div>
+
+        <button class="btn addBtn" disabled>Submit</button>
+      </div>
+      <div class="row my-4 gy-2">
+        <div class="col-md-9">
+          <input
+            type="text"
+            placeholder="search by Name"
+            id="searchInput"
+            class="form-control h-100"
+          />
+        </div>
+        <div class="col-md-3">
+          <button
+            class="btn btn-danger w-100 py-2 px-4"
+            id="deleteAllBtn"
+            disabled
+          >
+            <i class="fa-solid fa-trash-can"></i> Delete All
+          </button>
+        </div>
+      </div>
+
+      <div class="row g-4 text-center" id="bookmarkCards">
+      
+      
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="
+            https://cdn.jsdelivr.net/npm/sweetalert2@11.10.1/dist/sweetalert2.all.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

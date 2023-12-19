@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap");
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 1s;
+  /* border: #df0016 1px solid; */
+}
+
+:root {
+  --primary-dark: #392467;
+  --sec-dark: #5d3587;
+  --light-color: #a367b1;
+  --light: #ffd1e3;
+  --pacifico: "Pacifico", cursive;
+  --pt: "PT Sans Caption", sans-serif;
+  --righteous: "Righteous", sans-serif;
+}
+
+body {
+  background-color: var(--primary-dark);
+}
+
+::selection {
+  background-color: var(--light-color);
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  background-color: red;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+nav ul li .nav-link::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: var(--white, #fff);
+  position: absolute;
+  top: 85%;
+  left: 0;
+  transform: scale(0, 1);
+  transform-origin: left;
+}
+
+h1 {
+  text-align: center;
+  font-family: var(--pacifico);
+  position: relative;
+  margin: auto;
+  margin-bottom: 20px;
+  width: fit-content;
+  font-size: 50px;
+  color: #fff;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 35%;
+  background-color: var(--light-color);
+  z-index: -1;
+}
+
+h1:hover::after {
+  height: 70%;
+}
+
+#form {
+  padding: 20px 0;
+  border-top: 2px dotted var(--light);
+  border-bottom: 2px dotted var(--light);
+}
+
+#form h3 {
+  text-align: center;
+  color: var(--light);
+  font-family: var(--righteous);
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+#form label {
+  color: var(--light);
+  margin-bottom: 5px;
+}
+
+#form .error-message {
+  position: absolute;
+  left: 10px;
+  top: 95%;
+  background-color: #df0016;
+  border-radius: 5px;
+  padding: 0 10px;
+  box-shadow: 0 0 10px 0px #0000008c;
+  z-index: 9;
+}
+
+#form .error-message p {
+  color: #fff;
+}
+
+#form .error-message i {
+  position: absolute;
+  bottom: 70%;
+  left: 5%;
+  font-size: 24px;
+}
+
+input:focus {
+  border-color: var(--light) !important;
+  box-shadow: 0 0 0 2px rgb(255 209 227) !important;
+}
+
+#form .btn {
+  display: block;
+  margin: auto;
+  padding: 10px 40px;
+  border: none;
+  font-family: var(--pt);
+  font-weight: bold;
+  transition: all 1s;
+}
+
+#form .addBtn {
+  background-color: var(--light-color);
+  color: #fff;
+}
+
+#form .updateBtn {
+  background-color: #ffc107;
+  color: #000;
+}
+
+#form .btn:hover {
+  transform: scale(1.05);
+}
+
+#deleteAllBtn {
+  font-family: var(--pt);
+  font-weight: bold;
+}
+
+.bookmark {
+  background-color: var(--light);
+  color: var(--sec-dark);
+  border-radius: 8px;
+  box-shadow: 0px 8px 17px 0px rgba(0, 0, 0, 0.4);
+}
+
+.bookmark h4,
+.bookmark h5 {
+  font-family: var(--pt);
+  font-weight: 600;
+}
+.bookmark h4 {
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+.bookmark .circleBg {
+  background-color: var(--sec-dark);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  padding-top: 5px;
+  margin-right: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bookmark #visitBtn {
+  background-color: var(--light-color) !important;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.bookmark #visitBtn:hover {
+  background-color: var(--sec-dark) !important;
+}
