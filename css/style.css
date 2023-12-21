@@ -37,18 +37,6 @@ a {
   width: 100%;
 }
 
-nav ul li .nav-link::after {
-  content: "";
-  height: 2px;
-  width: 100%;
-  background-color: var(--white, #fff);
-  position: absolute;
-  top: 85%;
-  left: 0;
-  transform: scale(0, 1);
-  transform-origin: left;
-}
-
 h1 {
   text-align: center;
   font-family: var(--pacifico);
