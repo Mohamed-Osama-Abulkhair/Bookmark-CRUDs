@@ -12,13 +12,12 @@ let displayError = (regex, input, errorMessage) => {
   if (regex.test(input.value)) {
     input.classList.add("is-valid");
     input.classList.remove("is-invalid");
-    addBtn.removeAttribute("disabled");
     errorMessage.classList.add("d-none");
     addValidation();
   } else {
     input.classList.add("is-invalid");
-    addBtn.disabled = "true";
     errorMessage.classList.remove("d-none");
+    addValidation();
   }
 };
 
@@ -29,14 +28,13 @@ let addValidation = () => {
     } else {
       if (rejexName.test(nameInput.value) && rejexURL.test(URLInput.value)) {
         addBtn.removeAttribute("disabled");
-        inputs[i].classList.add("is-valid");
-        inputs[i].classList.remove("is-invalid");
       } else {
         addBtn.disabled = "true";
       }
     }
   }
 };
+
 
 nameInput.onkeyup = () => {
   displayError(rejexName, nameInput, nameError);
@@ -227,6 +225,7 @@ deleteAllBtn.onclick = () => {
           "bookmarks",
           JSON.stringify(bookmarkCardsArray)
         );
+          bookmarkCardsArray=[]
         deleteAllBtn.disabled = "true";
         bookmarkCards.innerHTML = "";
       } else if (result.dismiss === Swal.DismissReason.cancel) {
